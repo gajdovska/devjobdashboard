@@ -1,12 +1,7 @@
-type SearchFormType = {
-	setSearchInput: (input: string) => void;
-	searchInput: string;
-};
+import { useSearchTextContext } from "../contexts/SearchTextContextProvider";
 
-export default function SearchForm({
-	setSearchInput,
-	searchInput,
-}: SearchFormType) {
+export default function SearchForm() {
+	const { searchInput, handleChangeSearchText } = useSearchTextContext();
 	return (
 		<form
 			action="#"
@@ -25,7 +20,7 @@ export default function SearchForm({
 				type="text"
 				required
 				onChange={(e) => {
-					setSearchInput(e.target.value);
+					handleChangeSearchText(e.target.value);
 				}}
 				placeholder="Find remote developer jobs..."
 			/>

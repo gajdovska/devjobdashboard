@@ -246,7 +246,7 @@ body::-webkit-scrollbar {
 .job-list {
 	background-color: #fff;
 	position: relative;
-	/* height: 100%; */
+	min-height: 140px;
 	flex: 1;
 	display: flex;
 	flex-direction: column;
@@ -294,7 +294,6 @@ body::-webkit-scrollbar {
 	transform: translateX(-50%);
 	transform-origin: left;
 	transition: all 0.2s;
-	/* pointer-events: none; */
 
 	position: fixed;
 	left: 50%;
@@ -302,8 +301,6 @@ body::-webkit-scrollbar {
 }
 
 .job-list--bookmarks {
-	/* visibility: hidden; */
-	/* opacity: 0; */
 	min-height: 76px;
 	min-width: 340px;
 	width: 340px;
@@ -314,7 +311,6 @@ body::-webkit-scrollbar {
 	transform: translateX(-50%);
 	transform-origin: left;
 	transition: all 0.2s;
-	/* pointer-events: none; */
 
 	position: fixed;
 	left: 50%;
@@ -348,7 +344,6 @@ body::-webkit-scrollbar {
 	cursor: pointer;
 	transition: background-color 0.2s;
 	background-color: #fff;
-	/* flex: 1; */
 	height: 76px;
 }
 
@@ -375,7 +370,6 @@ body::-webkit-scrollbar {
 	font-size: 13px;
 	height: 46px;
 	width: 38px;
-	/* background-color: #8dd335; */
 	background-color: #dee3e9;
 	border-radius: 5px;
 	display: flex;
@@ -385,24 +379,11 @@ body::-webkit-scrollbar {
 	margin-right: 13px;
 }
 
-/* .job-item:nth-child(4n + 2) .job-item__badge {
-  background-color: #3d87f1;
-}
-
-.job-item:nth-child(4n + 3) .job-item__badge {
-  background-color: #d2d631;
-}
-
-.job-item:nth-child(4n + 4) .job-item__badge {
-  background-color: #d96a46;
-} */
-
 .job-item__middle {
 }
 
 .job-item__company {
 	font-size: 13px;
-	/* margin-bottom: 2px; */
 	font-style: italic;
 }
 
@@ -974,37 +955,6 @@ body::-webkit-scrollbar {
 	align-items: center;
 	justify-content: space-between;
 	color: #a4a9ac;
-}
-
-/* COPYRIGHT */
-.footer > small {
-	font-size: 11px;
-	max-width: 200px;
-}
-
-.footer > small *::selection {
-	background-color: rgba(255, 255, 255, 0.1);
-}
-
-.footer > small > p:first-child {
-	line-height: 1.2;
-}
-
-.footer > small > p:first-child > a {
-	text-decoration: underline;
-}
-
-.footer > small > p:first-child > svg {
-	font-size: 10px;
-	margin-right: 4px;
-	margin-left: 2px;
-	color: #aeb3b6;
-}
-
-/* JOBS AVAILABLE */
-.footer > p {
-	font-size: 11px;
-	align-self: flex-start;
 }
 
 /* SPINNER */

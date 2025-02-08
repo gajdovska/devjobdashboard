@@ -1,3 +1,4 @@
+import { useActiveIdContext } from "../contexts/ActiveIdContextProvider";
 import { JobItem } from "../lib/types";
 import BookmarkIcon from "./BookmarkIcon";
 
@@ -6,8 +7,11 @@ type JobItemProps = {
 };
 
 export default function JobListItem({ job }: JobItemProps) {
+	const { activeId } = useActiveIdContext();
+	const isActive = job.id === activeId;
+
 	return (
-		<li className="job-item">
+		<li className={`job-item ${isActive ? "job-item--active" : ""}`}>
 			<a href={`#${job.id}`} className="job-item__link">
 				<div className="job-item__badge">{job.badgeLetters}</div>
 
@@ -17,8 +21,8 @@ export default function JobListItem({ job }: JobItemProps) {
 				</div>
 
 				<div className="job-item__right">
-					<BookmarkIcon />
-					<time className="job-item__time">{job.daysAgo}</time>
+					<BookmarkIcon id={job.id} />
+					<time className="job-item__time">{job.daysAgo}d</time>
 				</div>
 			</a>
 		</li>
